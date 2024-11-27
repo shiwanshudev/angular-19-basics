@@ -1,0 +1,33 @@
+<div class="container">
+  <h3 class="text-center py-3">{{ "@For Loop" }}</h3>
+  <table class="table table-bordered">
+    <thead>
+      <th>S.No.</th>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Status</th>
+    </thead>
+    <tbody>
+      @for(student of studentsList ; track $index){
+      <tr>
+        <td>{{ $index + 1 }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.subject }}</td>
+        <td
+          [class]="
+            student.isActive ? 'bg-success text-white' : 'bg-danger text-white'
+          "
+        >
+          {{ student.isActive ? "Active" : "Not Active" }}
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <h3 class="text-center py-3">{{ "@If Else" }}</h3>
+  @if (studentsList[0].name == 'Ram Kumar'){
+  <p class="text-center">Ram's Subject: {{ studentsList[0].subject }}</p>
+  }@else {
+  <p class="text-center">User does not exist!</p>
+  }
+</div>
