@@ -74,5 +74,15 @@
       <option value="Oddissa">Oddissa</option>
     </select>
     <h3>Selected State: {{ state }}</h3>
+    <h3>Passing data from html to ts</h3>
+    <button class="btn btn-primary" (click)="onChangeText('I have changed!')">
+      Change Text
+    </button>
+    <p>{{ changedText }}</p>
+  </section>
+  <section class="pt-3 text-center">
+    <h3>Two Way Binding</h3>
+    <input [(ngModel)]="name" placeholder="Write your name..." />
+    <p>{{ name }}</p>
   </section>
 </div>
