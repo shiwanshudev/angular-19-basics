@@ -1,0 +1,28 @@
+<div class="container pt-5">
+  <div class="mb-3">
+    <label for="todo" class="form-label">Add Todo</label>
+    <div class="row">
+      <div class="col-md-11 col-sm-12">
+        <input
+          type="text"
+          class="form-control"
+          id="todo"
+          aria-describedby="add todo"
+          (change)="onInputChange($event)"
+        />
+      </div>
+      <div class="col-md-1 col-sm-12 mt-sm-2 mt-md-0">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+          Submit
+        </button>
+      </div>
+    </div>
+    <div id="todo-help" class="form-text">Add todo here and click submit.</div>
+  </div>
+
+  <ul class="list-group">
+    @for(todo of todos; track $index){
+    <li class="list-group-item">{{ todo }}</li>
+    }
+  </ul>
+</div>
