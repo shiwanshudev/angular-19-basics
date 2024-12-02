@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-4">
+    <button class="btn btn-success" (click)="getUsers()">Get Users</button>
+  </div>
+  <div class="col-4">
+    <button class="btn btn-success" (click)="getEmployees()">
+      Get Employees
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-5">
+    <ul>
+      @for(user of userList; track $index){
+      <li>{{ user.name }} - {{ user.email }}</li>
+      }
+    </ul>
+  </div>
+  <div class="col-5">
+    <table class="table table-bordered">
+      <thead>
+        <th>S No.</th>
+        <th>Name</th>
+      </thead>
+      <tbody>
+        @for(employee of employeeList; track $index){
+        <tr>
+          <td>{{ $index + 1 }}</td>
+          <td>{{ employee.employeeName }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

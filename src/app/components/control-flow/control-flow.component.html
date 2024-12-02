@@ -14,8 +14,10 @@
         <td>{{ student.name }}</td>
         <td>{{ student.subject }}</td>
         <td
-          [class]="
+          class="
+            {{
             student.isActive ? 'bg-success text-white' : 'bg-danger text-white'
+          }}
           "
         >
           {{ student.isActive ? "Active" : "Not Active" }}
