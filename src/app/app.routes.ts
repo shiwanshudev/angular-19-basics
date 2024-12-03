@@ -4,6 +4,7 @@ import { ControlFlowComponent } from './components/control-flow/control-flow.com
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { GetApiComponent } from './components/get-api/get-api.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'control-flow', component: ControlFlowComponent },
   { path: 'get-api', component: GetApiComponent },
+  { path: 'videos', component: VideosComponent },
 ];
