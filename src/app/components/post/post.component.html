@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-3">Posts</h2>
+      <div class="card mb-3">
+        @for(post of posts; track $index){
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.body }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

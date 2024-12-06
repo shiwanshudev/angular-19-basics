@@ -5,6 +5,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { GetApiComponent } from './components/get-api/get-api.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { PostComponent } from './components/post/post.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -13,4 +14,5 @@ export const routes: Routes = [
   { path: 'control-flow', component: ControlFlowComponent },
   { path: 'get-api', component: GetApiComponent },
   { path: 'videos', component: VideosComponent },
+  { path: 'posts', component: PostComponent },
 ];
