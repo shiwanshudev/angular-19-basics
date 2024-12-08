@@ -6,6 +6,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { GetApiComponent } from './components/get-api/get-api.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PostComponent } from './components/post/post.component';
+import { VideoMasterComponent } from './components/video-master/video-master.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -15,4 +16,5 @@ export const routes: Routes = [
   { path: 'get-api', component: GetApiComponent },
   { path: 'videos', component: VideosComponent },
   { path: 'posts', component: PostComponent },
+  { path: 'video-master', component: VideoMasterComponent },
 ];

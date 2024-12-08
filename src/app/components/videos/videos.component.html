@@ -15,11 +15,21 @@
                 <p class="card-text">
                   {{ video.videoDescription }}
                 </p>
-                <a href="#" class="card-link">
-                  <button class="btn btn-sm btn-warning">Edit</button>
+                <a class="card-link">
+                  <button
+                    class="btn btn-sm btn-warning"
+                    (click)="onEdit(video)"
+                  >
+                    Edit
+                  </button>
                 </a>
-                <a href="#" class="card-link">
-                  <button class="btn btn-sm btn-danger">Delete</button>
+                <a class="card-link">
+                  <button
+                    class="btn btn-sm btn-danger"
+                    (click)="onDelete(video.videoId)"
+                  >
+                    Delete
+                  </button>
                 </a>
               </div>
             </div>
@@ -84,12 +94,21 @@
             <button class="btn btn-secondary">Reset</button>
           </div>
           <div class="col-6 text-center">
+            @if(videoObj.videoId == 0){
             <button
               class="btn btn-secondary bg-primary"
               (click)="onSaveVideo()"
             >
               Save Video
             </button>
+            }@else{
+            <button
+              class="btn btn-secondary bg-primary"
+              (click)="onUpdateVideo()"
+            >
+              Update Video
+            </button>
+            }
           </div>
         </div>
       </div>

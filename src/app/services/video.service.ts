@@ -15,4 +15,10 @@ export class VideoService {
   saveVideo(obj: VideoModel) {
     return this.http.post(this.apiURL + 'AddNewVideo', obj);
   }
+  updateVideo(obj: VideoModel) {
+    return this.http.put(this.apiURL + 'UpdateVideo', obj);
+  }
+  deleteVideo(id: number) {
+    return this.http.delete(this.apiURL + 'DeleteVideo?videoId=' + id);
+  }
 }
