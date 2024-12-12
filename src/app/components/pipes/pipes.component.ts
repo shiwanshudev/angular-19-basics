@@ -4,7 +4,7 @@ import {
   SlicePipe,
   UpperCasePipe,
 } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-pipes',
@@ -18,4 +18,9 @@ export class PipesComponent {
     name: 'Kumar',
     occupation: 'Developer',
   };
+
+  courseName = signal<string>('Java');
+  changeCourseName() {
+    this.courseName.set('Python');
+  }
 }

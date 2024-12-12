@@ -2,3 +2,8 @@
 <p>Lowercase Name: {{ name | lowercase }}</p>
 <p>Slice Name: {{ name | slice : 0 : 3 }}</p>
 <div>JSON: {{ person | json }}</div>
+<p>{{ courseName() }}</p>
+
+<button class="btn btn-primary" (click)="changeCourseName()">
+  Change Course Name
+</button>
