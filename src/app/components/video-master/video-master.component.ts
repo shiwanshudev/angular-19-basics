@@ -2,10 +2,12 @@ import { Component, inject } from '@angular/core';
 import { VideoModel } from '../../model/Video';
 import { VideoService } from '../../services/video.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from '../../reusableComponent/alert/alert.component';
+import { MyButtonComponent } from '../../reusableComponent/my-button/my-button.component';
 
 @Component({
   selector: 'app-video-master',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, AlertComponent, MyButtonComponent],
   templateUrl: './video-master.component.html',
   styleUrl: './video-master.component.css',
 })
@@ -20,7 +22,7 @@ export class VideoMasterComponent {
     videoThumbnail: new FormControl(''),
   });
   videoSrv = inject(VideoService);
-
+  name: string = 'Ram Kumar';
   ngOnInit(): void {
     this.getVideos();
   }
@@ -40,6 +42,9 @@ export class VideoMasterComponent {
         alert(result.message);
       }
     });
+  }
+  onClick(data: string) {
+    console.log(data);
   }
   // onUpdateVideo() {
   //   this.videoSrv.updateVideo(this.videoObj).subscribe((result: any) => {

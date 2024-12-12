@@ -5,6 +5,18 @@
         <h5>Videos List</h5>
       </div>
       <div class="card-body">
+        <app-my-button
+          [btnName]="'Create User'"
+          (onBtnClick)="onClick($event)"
+        ></app-my-button>
+        <div class="row">
+          <div class="col-6">
+            <app-alert [name]="name"></app-alert>
+          </div>
+          <div class="col-6">
+            <app-alert [name]="'Shyam Kumar'"></app-alert>
+          </div>
+        </div>
         <div class="row w-100">
           @for(video of videoList; track $index){
           <div class="col-4 pt-3">
