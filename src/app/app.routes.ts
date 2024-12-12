@@ -7,6 +7,7 @@ import { GetApiComponent } from './components/get-api/get-api.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PostComponent } from './components/post/post.component';
 import { VideoMasterComponent } from './components/video-master/video-master.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -17,4 +18,5 @@ export const routes: Routes = [
   { path: 'videos', component: VideosComponent },
   { path: 'posts', component: PostComponent },
   { path: 'video-master', component: VideoMasterComponent },
+  { path: 'pipes', component: PipesComponent },
 ];
